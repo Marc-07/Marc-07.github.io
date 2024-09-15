@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Cita</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <header class="bg-teal-600 text-white py-4">
+        <div class="container mx-auto text-center">
+            <h1 class="text-3xl font-bold">Administrador de Citas de Veterinaria</h1>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 flex flex-col md:flex-row gap-8">
+        <!-- Formulario -->
+        <section class="w-full md:w-1/2 bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-semibold mb-4">Agregar Paciente</h2>
+            <h3 class="text-lg mb-4">Añade pacientes y <span class="text-teal-600">Adminístralos</span></h3>
+
+            <form id="formulario-cita" class="max-h-screen overflow-y-auto p-5">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700">Nombre del Paciente:</label>
+                    <input type="text" id="paciente" name="paciente" class="w-full px-3 py-2 border rounded-md"
+                        placeholder="Nombre del paciente" />
+                </div>
+
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700">Nombre del Propietario:</label>
+                    <input type="text" id="propietario" name="propietario" class="w-full px-3 py-2 border rounded-md"
+                        placeholder="Nombre del propietario" />
+                </div>
+
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700">Email:</label>
+                    <input type="email" id="email" name="email" class="w-full px-3 py-2 border rounded-md"
+                        placeholder="E-mail" />
+                </div>
+
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700">Fecha alta:</label>
+                    <input type="date" id="fecha" name="fecha" class="w-full px-3 py-2 border rounded-md" />
+                </div>
+
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700 mt-4">Foto</label>
+                    <input type="file" id="foto" name="file"
+                        class="file-input file-input-bordered file-input-sm w-full" />
+                </div>
+
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700">Síntomas:</label>
+                    <textarea placeholder="Síntomas de tu mascota" id="sintomas" name="sintomas"
+                        class="w-full px-3 py-2 border rounded-md"></textarea>
+                </div>
+
+                <input value="Registrar Paciente" type="submit"
+                    class="btn bg-teal-600 hover:bg-teal-800 text-white font-semibold mt-2 rounded-xl w-full" />
+            </form>
+        </section>
+
+        <!-- Listado de Pacientes -->
+        <section class="w-full md:w-1/2 bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-semibold mb-4">Listado de Pacientes</h2>
+            <h3 class="text-lg mb-4">Administra tus <span class="text-teal-600">Pacientes y Citas</span></h3>
+            <div id="citas" class="space-y-4 max-h-[70vh] overflow-y-auto bg-white p-5 rounded-lg shadow-lg">
+                <p class="text-xl mt-5 mb-10 text-center font-bold text-teal-600">No hay pacientes todavía</p>
+            </div>
+        </section>
+    </main>
+    
+    <script src="app.js"></script>
+</body>
+</html>
+
+
